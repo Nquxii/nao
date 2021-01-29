@@ -35,8 +35,6 @@ Type t to view the time.
 Type q to view another quote.
 
 Type x to exit nao.
-
-
 '''
 
 
