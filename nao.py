@@ -182,11 +182,17 @@ def cate():
             except IndexError:
                 pass
     else:
+        sects = (data["categories"]).split(', ')
+        inc()
+        sec = 'cat' + str(-1 + incr)
+
+
+
         if data["categories"] == '' or data["categories"] == ' ':
             pass
 
         else:
-            print('[' + data["categories"] + ']')
+            print('[' + data["categories"] + ']', data[sec])
 
 
 # Nao arguments
