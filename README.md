@@ -8,7 +8,7 @@ Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help 
 To get started with nao, clone this repository, change your directory into nao, and run the setup script like so:
 
 
-`git clone https://github.com/Nquxii/nao.py`
+`git clone https://github.com/Nquxii/nao`
 
 `cd nao`
 
