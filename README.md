@@ -1,6 +1,6 @@
 # What is nao?
 
-Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. **Don't look around and waste your time.** Get your boost for the day and move forward with your goals.
+Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. Get your boost for the day and move forward with your goals.
   
   
   
@@ -119,3 +119,5 @@ when you make your own categories, there is no set divisor and you remove your d
 ```
 
 #### this should give you some knowledge as to how the category system works, it removes strings, not indexed variables.
+
+##### Thank you for viewing. I hope you find the script useful.
