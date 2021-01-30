@@ -1,6 +1,6 @@
 # What is nao?
 
-Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. Get your boost for the day and move forward with your goals.
+Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. **Don't look around and waste your time.** Get your boost for the day and move forward with your goals.
 
 
 ## Setup
@@ -8,7 +8,7 @@ Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help 
 To get started with nao, clone this repository, change your directory into nao, and run the setup script like so:
 
 
-`git clone https://github.com/Nquxii/nao`
+`git clone https://github.com/Nquxii/nao.py`
 
 `cd nao`
 
@@ -39,7 +39,7 @@ Nao uses `json` to store and grab information. if you'd like, you can skip the s
 | q   | display another quote                                       | q                                                                         | nao>>q            |
 | h   | show all nao commands                                       | h                                                                         | nao>>h            |
 | t   | display the current time                                    | t                                                                         | nao>>t            |
-| -n  | add (or change) your name                                   | -n {name}                                                                 | nao>>-n Name       |
+| -   | add (or change) your name                                   | t                                                                         | nao>>n Name       |
 | -t  | add another to-do to nao                                    | -t {subject}                                                              | -t Walk the dog   |
 | -rt | remove a to-do from nao                                     | -rt {number of todo}                                                      | -rt 2             | 
 | -c  | add a new category to nao                                   | -c {topic}                                                                | -c SCHD           |
