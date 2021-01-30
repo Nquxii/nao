@@ -1,8 +1,15 @@
 # What is nao?
 
 Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. **Don't look around and waste your time.** Get your boost for the day and move forward with your goals.
-
-
+  
+  
+  
+  
+![alt text](https://github.com/Nquxii/nao/blob/main/imgs/demo.png?raw=true)
+  
+  
+  
+  
 ## Setup
 
 To get started with nao, clone this repository, change your directory into nao, and run the setup script like so:
