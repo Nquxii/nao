@@ -39,7 +39,7 @@ Nao uses `json` to store and grab information. if you'd like, you can skip the s
 | q   | display another quote                                       | q                                                                         | nao>>q            |
 | h   | show all nao commands                                       | h                                                                         | nao>>h            |
 | t   | display the current time                                    | t                                                                         | nao>>t            |
-| -   | add (or change) your name                                   | t                                                                         | nao>>n Name       |
+| -n  | add (or change) your name                                   | -n {name}                                                                 | nao>>-n Name       |
 | -t  | add another to-do to nao                                    | -t {subject}                                                              | -t Walk the dog   |
 | -rt | remove a to-do from nao                                     | -rt {number of todo}                                                      | -rt 2             | 
 | -c  | add a new category to nao                                   | -c {topic}                                                                | -c SCHD           |
