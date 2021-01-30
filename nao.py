@@ -182,7 +182,11 @@ def cate():
             except IndexError:
                 pass
     else:
-        pass
+        if data["categories"] == '' or data["categories"] == ' ':
+            pass
+
+        else:
+            print('[' + data["categories"] + ']')
 
 
 # Nao arguments
