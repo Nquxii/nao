@@ -109,7 +109,13 @@ def rem_todo(i):
 # Add another category
 def add_category(i):
     i = i.removeprefix('-c ')
-    cate = data["categories"] + ', ' + i
+
+    if data["categories"] == '' or data["categories"] == ' ':
+        cate = i
+
+    else:
+        cate = data["categories"] + ', ' + i
+
     data["categories"] = cate
 
 
@@ -117,15 +123,20 @@ def add_category(i):
 def rem_category(i):
     i = i.removeprefix('-rc ')
 
-    index = int(i) + -1
+    if ', ' in data["categories"]:
 
-    cat = (data["categories"]).split(', ')
+        index = int(i) + -1
 
-    to_rem = ', ' + cat[index]
+        cat = (data["categories"]).split(', ')
 
-    data["categories"] = (data["categories"]).replace(to_rem, "")
+        to_rem = ', ' + cat[index]
 
-    data['cat' + str(index)] = ''
+        data["categories"] = (data["categories"]).replace(to_rem, "")
+
+        data['cat' + str(index)] = ''
+
+    else:
+        data["categories"] = ''
 
 
 def add_description(i):
@@ -151,24 +162,27 @@ incr = 0
 
 
 def cate():
-    sects = (data["categories"]).split(', ')
-    inc()
+    if ', ' in data["categories"]:
+        sects = (data["categories"]).split(', ')
+        inc()
 
-    increm = -1 + incr
+        increm = -1 + incr
 
-    sec = 'cat' + str(increm)
+        sec = 'cat' + str(increm)
 
-    if data[sec] == '':
-        pass
-
-    else:
-        try:
-            print('[' + sects[int(increm)] + ']', data[sec])
-            jsu()
-            cate()
-
-        except IndexError:
+        if sects[increm] == '' or sects[increm] == ' ':
             pass
+
+        else:
+            try:
+                print('[' + sects[int(increm)] + ']', data[sec])
+                jsu()
+                cate()
+
+            except IndexError:
+                pass
+    else:
+        pass
 
 
 # Nao arguments
