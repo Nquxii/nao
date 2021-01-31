@@ -1,4 +1,4 @@
-# What is nao?
+# nao.py - Never leave your terminal! 
 
 Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. Get your boost for the day and move forward with your goals.
   
@@ -25,10 +25,12 @@ To get started with nao, clone this repository, change your directory into nao, 
 these commands should get you started.
 
 `-n Name` *sets your name as 'Name'*  
+  
 `-c SCHD` *adds category 'SCHD'*  
+  
 `-d, 1, Math Class` *adds 'Math Class' to your SCHD category*  
-
-
+  
+  
 Nao uses `json` to store and grab information. if you'd like, you can skip the setup entirely and modify the json, in the same folder.
 
 
