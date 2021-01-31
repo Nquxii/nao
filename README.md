@@ -1,6 +1,6 @@
 # nao.py - Never leave your terminal! 
 
-Nao.py is an easy-to-use, productivity oriented terminal bot that wants to help you get through your day and achieve what you need to. Get your boost for the day and move forward with your goals.
+Nao.py is an easy-to-use, productivity oriented terminal bot that outlines your day and displays what you need to. Get your boost for the day and move forward with your goals.
   
   
   
