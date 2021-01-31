@@ -52,7 +52,7 @@ Nao uses `json` to store and grab information. if you'd like, you can skip the s
 | -t  | add another to-do to nao                                    | -t {subject}                                                              | -t Walk the dog   |
 | -rt | remove a to-do from nao                                     | -rt {number of todo}                                                      | -rt 2             | 
 | -c  | add a new category to nao                                   | -c {topic}                                                                | -c SCHD           |
-| -rc | remove a category from nao                                  | -rc {number of user defined category}                                     | -rc               |
+| -rc | remove a category from nao                                  | -rc {number of user defined category}                                     | -rc 1             |
 | -d  | add a description to one of your categories                 | -d, {number of user defined category}, {what you want to input there}     | -d, 2, visit gran |
 | -rd | remove part of a description from one of your categories    | -rd, {number of user defined category}, {what you want to remove there}   | -rd, 2, visit gran|
 
