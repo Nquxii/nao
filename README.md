@@ -12,7 +12,7 @@ Nao.py is a simple terminal bot that outlines your day and displays what you nee
   
 ## Setup
 
-To get started with nao, clone this repository, change your directory into nao, and run the setup script like so:
+To get started with nao, clone this repository, change your directory into nao, and run the script like so:
 
 
 `git clone https://github.com/Nquxii/nao.py`
