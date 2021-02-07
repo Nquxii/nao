@@ -3,7 +3,7 @@
 Nao.py is a simple terminal bot that outlines your day and displays what you need it to. Get your boost for the day and move forward with your goals.
   
   
-  
+###### looking for contributors, please contact 
   
 ![alt text](https://github.com/Nquxii/nao/blob/main/imgs/demo.png?raw=true)
   
