@@ -4,16 +4,8 @@ import random
 import sys
 import json
 
-
-# Quote Grab
-def quote():
-    quote = linecache.getline('quotes.txt', random.randint(1, 50))
-    print(quote + '\n')
-
-
 # Help Commands
 helpn = '''
-
 Type -t [topic] to add a to-do.
 
 Type -rt [number] to remove a to-do.
@@ -37,39 +29,20 @@ Type q to view another quote.
 Type x to exit nao.
 '''
 
-
-# Greet User
-def greet():
-    ti = datetime.datetime.now()
-    if ti.hour < 12:
-        tt = 'Good Morning,'
-    elif 12 <= ti.hour < 18:
-        tt = 'Good afternoon,'
-    else:
-        tt = 'Good evening,'
-
-    print(tt, data["name"] + '\n')
-
-
 # Number increment command
 def inc():
     global incr
     incr = incr + 1
 
-
-# USER JSON COMMANDS
-
-# Load up the file
+# Main json file path (important to change for usage convinience)
 jsonFile = open('userfile.json')
 data = json.load(jsonFile)
 
-
-# Jsonupdate function
+# update json function
 def jsu():
     jsonFile = open("userfile.json", "w+")
     jsonFile.write(json.dumps(data))
     jsonFile.close()
-
 
 # Add another todo
 def add_todo(i):
@@ -78,12 +51,9 @@ def add_todo(i):
 
     if to_do == "" or to_do == " ":
         to_do = i
-
     else:
         to_do = to_do + ', ' + i
-
     data["todo"] = to_do
-
 
 # Remove a todo
 def rem_todo(i):
@@ -96,48 +66,35 @@ def rem_todo(i):
 
     if ', ' + to_rem in data["todo"]:
         to_rem = ', ' + to_rem
-
     elif to_rem + ', ' in data["todo"]:
         to_rem = to_rem + ', '
-
     else:
         print('\nno such value.\n')
 
     data["todo"] = (data["todo"]).replace(to_rem, '')
 
-
 # Add another category
 def add_category(i):
     i = i.removeprefix('-c ')
-
     if data["categories"] == '' or data["categories"] == ' ':
         cate = i
-
     else:
         cate = data["categories"] + ', ' + i
-
     data["categories"] = cate
-
 
 # Remove a category
 def rem_category(i):
     i = i.removeprefix('-rc ')
 
     if ', ' in data["categories"]:
-
         index = int(i) + -1
-
         cat = (data["categories"]).split(', ')
-
         to_rem = ', ' + cat[index]
-
         data["categories"] = (data["categories"]).replace(to_rem, "")
-
         data['cat' + str(index)] = ''
 
     else:
         data["categories"] = ''
-
 
 def add_description(i):
     i = i.removeprefix('-d, ')
@@ -145,7 +102,6 @@ def add_description(i):
     i[0] = int(i[0]) - 1
     sec = 'cat' + str(i[0])
     data[sec] = str(i[1])
-
 
 def rem_description(i):
     i = i.removeprefix('-rd, ')
@@ -156,18 +112,14 @@ def rem_description(i):
 
     (data[sect]).replace(i[1], '')
 
-
 # display extra categories
 incr = 0
-
-
 def cate():
     if ', ' in data["categories"]:
         sects = (data["categories"]).split(', ')
         inc()
 
         increm = -1 + incr
-
         sec = 'cat' + str(increm)
 
         if sects[increm] == '' or sects[increm] == ' ':
@@ -178,7 +130,6 @@ def cate():
                 print('[' + sects[int(increm)] + ']', data[sec])
                 jsu()
                 cate()
-
             except IndexError:
                 pass
     else:
@@ -186,11 +137,8 @@ def cate():
         inc()
         sec = 'cat' + str(-1 + incr)
 
-
-
         if data["categories"] == '' or data["categories"] == ' ':
             pass
-
         else:
             print('[' + data["categories"] + ']', data[sec])
 
@@ -198,45 +146,32 @@ def cate():
 # Nao arguments
 def com():
     i = str(input('\nnao >>'))
-
     if i == 'x':
         print('Sayonara.')
         sys.exit()
-
     elif i == 'q':
         quote()
-
     elif i == 'h':
         print(helpn)
-
     elif i == 't':
         print(datetime.datetime.now().strftime('%I:%M %p'))
-
     elif i.startswith('-t '):
         add_todo(i)
-
     elif i.startswith('-rt '):
         rem_todo(i)
-
     elif i.startswith('-c '):
         add_category(i)
-
     elif i.startswith('-rc '):
         rem_category(i)
-
     elif i.startswith('-d, '):
         add_description(i)
-
     elif i.startswith('-rd, '):
         rem_description(i)
-
     elif i.startswith('-n '):
         i = i.removeprefix('-n ')
         data["name"] = i
-
     jsu()
     com()
-
 
 print('''
 »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»
@@ -244,9 +179,17 @@ print('''
 «««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««««
 ''')
 
-greet()
+time = datetime.datetime.now()
+if time.hour < 12:
+    time = 'Good Morning,'
+elif 12 <= time.hour < 18:
+    time = 'Good afternoon,'
+else:
+    time = 'Good evening,'
+print(time, data["name"] + '\n')
 
-quote()
+quote = linecache.getline('quotes.txt', random.randint(1, 50))
+print(quote + '\n')
 
 print('[TIME]', datetime.datetime.now().strftime('%m/%d/%y | %I:%M %p'))
 
@@ -255,5 +198,4 @@ print('[DATE]', datetime.datetime.now().strftime('%A %B %d'))
 print('[TODO]', data["todo"])
 
 cate()
-
 com()
