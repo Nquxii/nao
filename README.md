@@ -1,6 +1,6 @@
-# nao.py - Never leave your terminal! 
+# nao.py - Never leave your terminal
 
-Nao.py is a simple terminal program that outlines your day and displays what you need it to. Get a boost for the day and move forward with your goals.
+Nao.py is a simple terminal program that outlines your day and displays what you need it to. Get a boost for the day and move forward with your goals
   
 ![basic setup of script](https://github.com/Nquxii/nao/blob/main/imgs/demo.png?raw=true)
   
