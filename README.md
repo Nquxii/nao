@@ -30,8 +30,8 @@ here are all current commands. There are examples for clarification.
 |------| ----------------------------------------- | ------------------------------------------------------------------------- | ----------------- |
 | h    | show all nao commands                     | -h                                                                        | -h                |
 | --n  | add (or change) your name                 | --n                                                                       | --n Mikasa        |
-| --a  | add another to-do to na                   | --a [subject]                                                             | --t Learn vim     |
-| --r | remove a to-do from nao                    | -rt [index  ]                                                             | --r 2             | 
+| --a  | add another to-do to nao                  | --a [subject]                                                             | --t Learn vim     |
+| --r  | remove a to-do from nao                   | --r [index  ]                                                             | --r 2             | 
 
 
 Thank you for viewing. I hope you find the script useful.
