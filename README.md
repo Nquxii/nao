@@ -10,7 +10,7 @@ Get a boost for the day and move forward with your goals.
 To get started with nao, clone this repository, change directory into nao, and run the script like so:
 
 ```
-git clone https://github.com/Nquxii/nao.py && cd nao
+git clone https://github.com/Nquxii/nao.py nao && cd nao
 ```
 ```
 python3 nao.py -h 
@@ -29,7 +29,7 @@ here are all current commands. There are examples for clarification.
 | Command | Description | Usage | Example |
 |------| ----------------------------------------- | ------------------------------------------------------------------------- | ----------------- |
 | h    | show all nao commands                     | -h                                                                        | -h                |
-| --n  | add (or change) your name                 | --n                                                                       | --n Mikasa        |
+| --cn | add (or change) your name                 | --cn                                                                      | --cn Mikasa       |
 | --a  | add another to-do to nao                  | --a [subject]                                                             | --t Learn vim     |
 | --r  | remove a to-do from nao                   | --r [index  ]                                                             | --r 2             | 
 
