@@ -10,7 +10,7 @@ Get a boost for the day and move forward with your goals.
 To get started with nao, clone this repository, change directory into nao, and run the script like so:
 
 ```
-$ git clone https://github.com/Nquxii/nao.py nao 
+$ git clone https://github.com/Nquxii/nao nao 
 $ cd nao
 $ python3 nao.py -h 
 ```
